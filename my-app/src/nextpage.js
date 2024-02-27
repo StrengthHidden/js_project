@@ -3,7 +3,7 @@ import React from "react";
 class NextPage extends React.Component {
     render(){
         return(
-           <div>NEXT PAGE</div> 
+           <div>답이다</div> 
         );
     }
 }

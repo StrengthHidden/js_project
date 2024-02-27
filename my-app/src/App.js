@@ -3,6 +3,7 @@ import './App.css';
 import ShowResult from './result.js'
 import React, { Component } from 'react';
 import NextPage from './nextpage.js'
+import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 
 class App extends Component {
@@ -15,23 +16,24 @@ class App extends Component {
   }
   render(){
 
-    const {score,resultImage,onSubmit}=this.state;
+    const {score,resultImage}=this.state;
     return (
       
       <div className="App">
+        <BrowserRouter>
         <header className="App-header">
-        
+        <Routes>
+          <Route path="/" element={ <ShowResult
+          score={score}
+          resultImage={resultImage}
+          />}></Route>
+          <Route path="/answer" element={<NextPage/>}></Route>
+        </Routes>
         </header>
 
-        <ShowResult
-        score={score}
-        resultImage={resultImage}
-        />
-      <form onSubmit={onSubmit}>
-        <NextPage/>
-        <button className='btn'>전체답 보러가기</button>
-      </form>
-      
+       
+     
+      </BrowserRouter>
       </div>
 
     );

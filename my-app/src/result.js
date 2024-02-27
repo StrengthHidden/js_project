@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css'
+import { Link } from 'react-router-dom';
 
 
 class ShowResult extends React.Component {
@@ -35,6 +36,11 @@ class ShowResult extends React.Component {
                 <h1 className="app-title">당신의 결과는?</h1>          
             </header>
             <img src= {resultImage} className="result-image"></img>
+            <form>
+                <Link to="/answer">
+                <button className='btn'>전체답 보러가기</button>
+                </Link>
+            </form>
         </div>
     );
     }
