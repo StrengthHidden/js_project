@@ -1,6 +1,5 @@
 import React from "react";
 
-
 const QuizEnd = ()=>{
     return (
         <div className="QuizEnd app-title">
