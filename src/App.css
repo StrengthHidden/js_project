@@ -1,38 +1,44 @@
-.App {
+body {
+  font-size: 16px;
+  background-color: rgb(229, 251, 255);
+}
+
+.app-header{
+  margin-top: 2rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app-title{
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.quiz-area .quiz-container{
+  display: block;
+  /* border: 1px solid #fff; */
+}
+ 
+.quiz-area .option-container{
+  margin: 10px 0;
+  display: block;
+  /* border: 2px solid #fff; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.form-check{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 7px 10px 7px 30px;
+  background-color: rgb(255, 244, 251);
 }
 
-.App-link {
-  color: #61dafb;
+
+.question-img{
+  max-width: 400px;
+  max-height: 400px;
+  border: 1px solid black;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{
+  margin: auto;
+  display: block;
 }
