@@ -1,5 +1,4 @@
 // used to display the final score
-
 import React, {Component} from 'react';
 import '../App.css';
 
