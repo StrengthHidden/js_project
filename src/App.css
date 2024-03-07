@@ -65,3 +65,15 @@ body {
   list-style: none;
   padding: 0;
 }
+
+.quiz-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 10px; /* 각 퀴즈 요소를 오른쪽으로 조금씩 띄워줌 */
+}
+
+.quiz-item:last-child {
+  margin-right: 0; /* 마지막 퀴즈 요소에는 오른쪽 마진을 적용하지 않음 */
+}

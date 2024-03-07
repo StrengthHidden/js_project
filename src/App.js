@@ -1,10 +1,11 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Header from "./Components/Header";
-import Main from "./Components/Main";
 import Questions from "./Components/Questions";
 import QuizEnd from "./Components/QuizEnd";
 import NotFound from "./Components/NotFound";
+import Main from "./Components/Main";
 import "./App.css";
+import QuizStart from './Components/QuizStart';
 
 
 const App=()=>{
@@ -13,7 +14,8 @@ const App=()=>{
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Main />}></Route>
+          <Route path="/" element={<Main/>}></Route>
+          <Route path="/quizstart" element={<QuizStart/>}></Route>
           <Route path="/question/:questionNum" element={<Questions />}></Route>
           <Route path="/quiz-end" element={<QuizEnd />}></Route>
           <Route path="*" element={<NotFound />}></Route>
