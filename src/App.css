@@ -65,3 +65,8 @@ body {
   list-style: none;
   padding: 0;
 }
+
+.result{
+  display: flex;
+  justify-content: center;
+}

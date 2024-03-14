@@ -13,11 +13,7 @@ const Questions=()=>{
     const goToNextQuestion = ()=>{
         const nextQuestionIdx = currentQuestionIdx+1;
         setCurrentQuestionIdx(nextQuestionIdx);
-        if(nextQuestionIdx < qBank.length){
-            navigate(`/question/${nextQuestionIdx+1}`);
-        } else{
-            navigate("/quiz-end");
-        }        
+        navigate(`/question/${nextQuestionIdx+1}`);
     };
     
     const handleOptionSelect = (e) =>{
@@ -25,16 +21,26 @@ const Questions=()=>{
         const updatedUserAnswers = [...userAnswers];
         updatedUserAnswers[currentQuestionIdx]=selectedOption;
         setUserAnswers(updatedUserAnswers);
-
-
     }
 
     const checkAnswer = (e) =>{
         e.preventDefault();
         if(userAnswers[currentQuestionIdx]===qBank[currentQuestionIdx].answer){
+            console.log("correct!");
             setScore(score+1);
         }
-        goToNextQuestion();
+
+        if(currentQuestionIdx === qBank.length -1){
+            if(userAnswers[currentQuestionIdx]===qBank[currentQuestionIdx].answer){
+                navigate("/quiz-end",{state: {score: `${score+1}`}});
+            }
+            else{
+                navigate("/quiz-end",{state: {score: `${score}`}});
+            }
+        }
+        else{
+            goToNextQuestion();
+        }
     }
 
     return (
@@ -61,6 +67,7 @@ const Questions=()=>{
                     <button className="btn" onClick={checkAnswer}>제출</button>
                 </form>
                 <p>점수: {score}</p>
+                <p>currentQuestionIdx: {currentQuestionIdx}</p>
         </div>
     );
 }
