@@ -1,0 +1,79 @@
+body {
+  font-size: 16px;
+  background-color: rgb(229, 251, 255);
+}
+
+.app-header{
+  padding: 0.5rem;
+  text-align: center;
+}
+
+.app-title{
+  font-weight: bold;
+  text-align: center;
+}
+
+.quiz-area{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* justify-content: center; */
+  /* text-align: center; */
+}
+
+.quiz-area .quiz-container{
+  display: block;
+  /* border: 1px solid #fff; */
+}
+
+.header-area{
+  background-color: rgb(255, 244, 251);
+}
+ 
+.quiz-area .option-container{
+  margin: 10px 0;
+  display: block;
+  /* border: 2px solid #fff; */
+}
+
+.form-check{
+  border: 1px solid black;
+  border-radius: 5px;
+  margin: 10px 0;
+  padding: 7px 10px 7px 30px;
+  background-color: rgb(255, 244, 251);
+}
+
+
+.question-img{
+  max-width: 400px;
+  max-height: 400px;
+  border: 1px solid black;
+}
+
+.btn{
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.btn-spacing{
+  margin-right: 10px;
+}
+
+.options{
+  list-style: none;
+  padding: 0;
+}
+
+.quiz-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-right: 10px; /* 각 퀴즈 요소를 오른쪽으로 조금씩 띄워줌 */
+}
+
+.quiz-item:last-child {
+  margin-right: 0; /* 마지막 퀴즈 요소에는 오른쪽 마진을 적용하지 않음 */
+}
